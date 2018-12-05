@@ -5,11 +5,14 @@ import {DeepDiveInterceptor} from "./shared/interceptors/deep.dive.interceptor";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {PostService} from "./shared/services/post.service";
 import {SessionService} from "./shared/services/session.service";
+import {MainNavComponent} from "./shared/components/main-nav.component";
+import {PostsComponent} from "./post/posts.component";
 
 
-export const allAppComponents = [SplashComponent];
+export const allAppComponents = [SplashComponent, MainNavComponent, PostsComponent];
 
 export const routes: Routes = [
+	{path: "posts", component: PostsComponent},
 	{path: "", component: SplashComponent}
 ];
 
